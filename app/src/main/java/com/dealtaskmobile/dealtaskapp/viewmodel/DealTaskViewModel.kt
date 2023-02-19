@@ -2,6 +2,7 @@ package com.dealtaskmobile.dealtaskapp.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
+import com.dealtaskmobile.domain.models.CreateUserParam
 import com.dealtaskmobile.domain.models.SaveUserParam
 import com.dealtaskmobile.domain.usercase.user.CreateAccount
 import com.dealtaskmobile.domain.usercase.user.GetUserId
@@ -28,6 +29,10 @@ class DealTaskViewModel constructor(private val createAccount: CreateAccount,
 
     fun enterAccount(param: SaveUserParam){
         signInAccount.execute(param = param)
+    }
+
+    fun createAccount(param: CreateUserParam){
+        createAccount.execute(param = param)
     }
 
 

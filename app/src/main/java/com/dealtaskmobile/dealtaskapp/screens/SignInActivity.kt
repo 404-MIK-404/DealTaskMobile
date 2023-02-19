@@ -13,6 +13,7 @@ import com.dealtaskmobile.dealtaskapp.viewmodel.DealTaskViewModelFactory
 import com.dealtaskmobile.domain.models.SaveUserParam
 import com.dealtaskmobile.signin.R
 import com.dealtaskmobile.signin.databinding.ActivitySignInBinding
+import com.google.firebase.FirebaseApp
 import kotlinx.android.synthetic.main.activity_sign_in.view.*
 import javax.inject.Inject
 
@@ -35,7 +36,6 @@ class SignInActivity : AppCompatActivity() {
         setContentView(R.layout.activity_sign_in)
         init()
         (applicationContext as App).appComponent.inject(this)
-
         vm = ViewModelProvider(this,vmFactory).get(DealTaskViewModel::class.java)
     }
 
