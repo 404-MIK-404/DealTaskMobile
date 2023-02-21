@@ -49,9 +49,6 @@ dependencies {
     implementation project(path: ':domain')
 
 
-    //Firebase Auth
-    implementation 'com.google.android.gms:play-services-auth:20.4.1'
-
 
     //Animation and Design
     implementation 'com.facebook.fresco:fresco:2.6.0'
@@ -63,13 +60,15 @@ dependencies {
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
-
     //Dagger
     implementation 'com.google.dagger:dagger:2.45'
     kapt 'com.google.dagger:dagger-compiler:2.45'
 
     //Firebase
     implementation 'com.google.firebase:firebase-database:20.0.3'
+    //Firebase Auth
+    implementation 'com.google.android.gms:play-services-auth:20.4.1'
+    implementation 'com.google.firebase:firebase-auth-ktx:21.1.0'
 
     //ViewModel
     def lifecycle_version = "2.5.1"

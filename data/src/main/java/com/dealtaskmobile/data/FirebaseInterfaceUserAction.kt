@@ -2,6 +2,8 @@ package com.dealtaskmobile.data
 
 import com.dealtaskmobile.domain.models.CreateUserParam
 import com.dealtaskmobile.domain.models.SaveUserParam
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 
 class FirebaseInterfaceUserAction(private val firebaseInstance: FirebaseInstance) : UserFirebaseInterface {
 
@@ -35,6 +37,14 @@ class FirebaseInterfaceUserAction(private val firebaseInstance: FirebaseInstance
         } catch (ex: java.lang.RuntimeException){
             System.out.println(ex.toString())
         }
+    }
+
+    override fun getClientSignInGoogle(idTok: String): GoogleSignInOptions {
+       return GoogleSignInOptions
+           .Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+           .requestIdToken(idTok)
+           .requestEmail()
+           .build()
     }
 
 

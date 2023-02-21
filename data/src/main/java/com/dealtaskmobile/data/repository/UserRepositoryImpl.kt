@@ -5,6 +5,8 @@ import com.dealtaskmobile.data.storage.UserStorage
 import com.dealtaskmobile.domain.models.CreateUserParam
 import com.dealtaskmobile.domain.models.SaveUserParam
 import com.dealtaskmobile.domain.repository.UserRepository
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 
 class UserRepositoryImpl(private val userStorage: UserStorage,private val firebaseInterfaceUserAction: FirebaseInterfaceUserAction) : UserRepository {
 
@@ -22,5 +24,9 @@ class UserRepositoryImpl(private val userStorage: UserStorage,private val fireba
 
     override fun resetPassword() {
         TODO("Not yet implemented")
+    }
+
+    override fun getClientSignInGoogle(idTok: String): GoogleSignInOptions {
+        return firebaseInterfaceUserAction.getClientSignInGoogle(idTok = idTok)
     }
 }

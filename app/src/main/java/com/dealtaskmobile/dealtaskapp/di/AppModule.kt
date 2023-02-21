@@ -2,6 +2,7 @@ package com.dealtaskmobile.dealtaskapp.di
 
 import android.content.Context
 import com.dealtaskmobile.dealtaskapp.viewmodel.DealTaskViewModelFactory
+import com.dealtaskmobile.domain.usercase.clientgoogle.GetClientSignInGoogle
 import com.dealtaskmobile.domain.usercase.user.CreateAccount
 import com.dealtaskmobile.domain.usercase.user.GetUserId
 import com.dealtaskmobile.domain.usercase.user.ResetPassword
@@ -19,9 +20,9 @@ class AppModule(val context: Context) {
     }
 
     @Provides
-    fun provideDealTaskViewModelFactory(createAccount: CreateAccount, getUserId: GetUserId, resetPassword: ResetPassword, signInAccount: SignInAccount
+    fun provideDealTaskViewModelFactory(createAccount: CreateAccount, getUserId: GetUserId, resetPassword: ResetPassword, signInAccount: SignInAccount,getClientSignInGoogle: GetClientSignInGoogle
     ): DealTaskViewModelFactory {
-        return DealTaskViewModelFactory(createAccount,getUserId,resetPassword, signInAccount)
+        return DealTaskViewModelFactory(createAccount,getUserId,resetPassword, signInAccount,getClientSignInGoogle)
     }
 
 

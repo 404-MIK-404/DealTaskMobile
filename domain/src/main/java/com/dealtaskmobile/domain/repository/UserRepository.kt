@@ -2,6 +2,8 @@ package com.dealtaskmobile.domain.repository
 
 import com.dealtaskmobile.domain.models.CreateUserParam
 import com.dealtaskmobile.domain.models.SaveUserParam
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 
 interface UserRepository {
 
@@ -9,5 +11,7 @@ interface UserRepository {
     fun createAccount(param: CreateUserParam)
     fun getUserId()
     fun resetPassword()
+
+    fun getClientSignInGoogle(idTok: String): GoogleSignInOptions
 
 }
