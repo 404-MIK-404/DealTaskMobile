@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
@@ -55,6 +56,8 @@ class SignInActivity : AppCompatActivity() {
         signInButton = findViewById(R.id.signInButton)
         editTextPassword = findViewById(R.id.editTextPassword)
         editTextEmailAddress = findViewById(R.id.editTextEmailAddress)
+        val googleTextView: TextView = signInButton?.getChildAt(0) as TextView
+        googleTextView.text = "Sign In with Google"
         signInButton?.setOnClickListener {
             SignInWithGoogle()
         }

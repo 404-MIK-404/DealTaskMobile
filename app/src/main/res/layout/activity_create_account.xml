@@ -28,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:textSize="35sp"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:text="Create Account"
                 android:gravity="center_horizontal|center_vertical"/>
 
@@ -45,6 +45,7 @@
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:layout_marginTop="30dp"
+            android:textColor="@color/white"
             android:text="Let’s get to know you ! \nEnter your details to continue"
             android:layout_marginBottom="25dp"/>
 
@@ -53,27 +54,34 @@
             android:layout_height="wrap_content"
             app:expandedHintEnabled="true"
             app:startIconDrawable="@mipmap/user"
+            style="@style/EditTextHint"
             android:layout_marginBottom="50dp">
 
             <EditText
                 android:id="@+id/enterUserNameCR"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/bg_white_rounded"
+                style="@style/EditTextHint"
                 android:ems="10"
                 android:hint="Enter username"
                 android:inputType="textEmailAddress" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:startIconDrawable="@mipmap/email"
+            style="@style/EditTextHint"
             android:layout_marginBottom="50dp">
 
             <EditText
                 android:id="@+id/enterEmailAddressCR"
                 android:layout_width="match_parent"
+                style="@style/EditTextHint"
                 android:layout_height="wrap_content"
+                android:background="@drawable/bg_white_rounded"
                 android:hint="Enter email"
                 android:ems="10"
                 android:inputType="textEmailAddress"/>
@@ -85,12 +93,16 @@
             android:layout_height="wrap_content"
             app:passwordToggleEnabled="true"
             app:startIconDrawable="@mipmap/padlock"
+            style="@style/EditTextHint"
+            app:endIconMode="password_toggle"
             android:layout_marginBottom="50dp">
 
             <EditText
                 android:id="@+id/enterPasswordCR"
                 android:layout_width="match_parent"
+                style="@style/EditTextHint"
                 android:layout_height="wrap_content"
+                android:background="@drawable/bg_white_rounded"
                 android:ems="10"
                 android:hint="Enter password"
                 android:inputType="textPassword"
@@ -101,13 +113,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:passwordToggleEnabled="true"
+            style="@style/EditTextHint"
+            app:endIconMode="password_toggle"
             android:layout_marginBottom="50dp">
 
             <EditText
                 android:id="@+id/enterPasswordRepeatCR"
                 android:layout_width="match_parent"
+                style="@style/EditTextHint"
                 android:layout_height="wrap_content"
                 android:hint="Enter repeat password"
+                android:background="@drawable/bg_white_rounded"
                 android:ems="10"
                 android:inputType="textPassword"
                 app:passwordToggleEnabled="true"/>
@@ -120,6 +136,8 @@
             android:layout_width="match_parent"
             android:layout_marginBottom="20dp"
             android:layout_height="60dp"
+            app:backgroundTint="@null"
+            android:background="@drawable/background_button"
             android:onClick="TestCreateAccount"
             app:cornerRadius="16dp"
             android:text="Create Account" />
@@ -128,6 +146,8 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/backSignInActivity"
             android:onClick="BackSignInActivity"
+            app:backgroundTint="@null"
+            android:background="@drawable/background_button"
             android:layout_width="match_parent"
             android:layout_marginBottom="20dp"
             android:layout_height="60dp"
