@@ -49,6 +49,7 @@ dependencies {
     implementation project(path: ':domain')
 
 
+    implementation "commons-codec:commons-codec:1.15"
 
     //Animation and Design
     implementation 'com.facebook.fresco:fresco:2.6.0'

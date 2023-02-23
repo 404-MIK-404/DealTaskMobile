@@ -3,6 +3,7 @@ package com.dealtaskmobile.dealtaskapp.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.dealtaskmobile.domain.usercase.clientgoogle.GetClientSignInGoogle
+import com.dealtaskmobile.domain.usercase.clientgoogle.SignInGoogleAuth
 import com.dealtaskmobile.domain.usercase.user.CreateAccount
 import com.dealtaskmobile.domain.usercase.user.GetUserId
 import com.dealtaskmobile.domain.usercase.user.ResetPassword
@@ -13,14 +14,15 @@ class DealTaskViewModelFactory(
     val getUserId: GetUserId,
     val resetPassword: ResetPassword,
     val signInAccount: SignInAccount,
-    val getClientSignInGoogle: GetClientSignInGoogle
+    val getClientSignInGoogle: GetClientSignInGoogle,
+    val signInGoogleAuth: SignInGoogleAuth
 
     ): ViewModelProvider.Factory {
 
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return DealTaskViewModel(
-            createAccount,getUserId,resetPassword,signInAccount,getClientSignInGoogle
+            createAccount,getUserId,resetPassword,signInAccount,getClientSignInGoogle,signInGoogleAuth
         ) as T
     }
 }

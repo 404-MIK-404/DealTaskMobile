@@ -2,6 +2,7 @@ package com.dealtaskmobile.dealtaskapp.di
 
 import com.dealtaskmobile.domain.repository.UserRepository
 import com.dealtaskmobile.domain.usercase.clientgoogle.GetClientSignInGoogle
+import com.dealtaskmobile.domain.usercase.clientgoogle.SignInGoogleAuth
 import com.dealtaskmobile.domain.usercase.user.CreateAccount
 import com.dealtaskmobile.domain.usercase.user.GetUserId
 import com.dealtaskmobile.domain.usercase.user.ResetPassword
@@ -37,6 +38,12 @@ class DomainModule {
     fun provideGetClientSignInGoogle(userRepository: UserRepository): GetClientSignInGoogle {
         return GetClientSignInGoogle(userRepository = userRepository)
     }
+
+    @Provides
+    fun provideSignInGoogleAuth(userRepository: UserRepository): SignInGoogleAuth {
+        return SignInGoogleAuth(userRepository = userRepository)
+    }
+
 
 
 }

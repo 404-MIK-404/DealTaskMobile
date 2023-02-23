@@ -10,10 +10,23 @@
 
 
     <style name="ActivityBaseTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name='android:windowBackground'>#171930</item>
         <item name="android:windowTranslucentStatus">true</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
+
+    <style name="EditTextHint" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="startIconTint">@color/white</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="hintTextColor">@color/white</item>
+
+    </style>
 
 </resources>
