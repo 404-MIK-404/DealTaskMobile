@@ -16,9 +16,17 @@
         android:theme="@style/Theme.SignIn"
         tools:targetApi="31">
         <activity
+            android:name="com.dealtaskmobile.dealtaskapp.screens.HomeActivity"
+            android:exported="false"
+            android:theme="@style/ActivityBaseTheme">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name="com.dealtaskmobile.dealtaskapp.screens.CreateAccountActivity"
-            android:theme="@style/ActivityBaseTheme"
-            android:exported="false">
+            android:exported="false"
+            android:theme="@style/ActivityBaseTheme">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

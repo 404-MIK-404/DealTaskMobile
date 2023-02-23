@@ -10,6 +10,7 @@
 
 
     <style name="ActivityBaseTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name='android:windowBackground'>@drawable/gradient_background</item>
         <item name="android:windowTranslucentStatus">true</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

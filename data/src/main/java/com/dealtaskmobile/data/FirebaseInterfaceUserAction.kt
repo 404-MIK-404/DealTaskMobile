@@ -1,6 +1,7 @@
 package com.dealtaskmobile.data
 
 import com.dealtaskmobile.domain.models.CreateUserParam
+import com.dealtaskmobile.domain.models.SaveUserGoogleParam
 import com.dealtaskmobile.domain.models.SaveUserParam
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -9,7 +10,7 @@ class FirebaseInterfaceUserAction(private val firebaseInstance: FirebaseInstance
 
     override fun enterAccount(param: SaveUserParam) {
         var reference = firebaseInstance.getReference()
-        reference.child(param.emailUser).get().addOnSuccessListener {
+        reference.child(param.passwordUser).get().addOnSuccessListener {
             if (it.value == null){
                 System.out.println("Получается что пусто: $it")
             } else {
@@ -17,25 +18,17 @@ class FirebaseInterfaceUserAction(private val firebaseInstance: FirebaseInstance
                 System.out.println("Пароль: " + it.child("passwordUser").value)
             }
         }
-
-        //reference.child(param.emailUser).setValue(param)
-        //var reference = firebaseInstance.getReference()
-        //reference.push().setValue(param)
     }
 
     override fun createAccount(param: CreateUserParam) {
-        try {
-            var reference = firebaseInstance.getReference()
-            reference.child(param.username).get().addOnSuccessListener {
-                if (it.value == null){
-                    System.out.println("Создаём пользователя !")
-                    reference.child(param.username).setValue(param)
-                } else {
-                    System.out.println("Не создаём, так как он уже был создан !")
-                }
+        var reference = firebaseInstance.getReference()
+        reference.child(param.passwordUser).get().addOnSuccessListener {
+            if (it.value == null){
+                reference.child(param.passwordUser).child("username").setValue(param.username)
+                reference.child(param.passwordUser).child("email").setValue(param.emailUser)
+            } else {
+                System.out.println("Не создаём, так как он уже был создан !")
             }
-        } catch (ex: java.lang.RuntimeException){
-            System.out.println(ex.toString())
         }
     }
 
@@ -45,6 +38,18 @@ class FirebaseInterfaceUserAction(private val firebaseInstance: FirebaseInstance
            .requestIdToken(idTok)
            .requestEmail()
            .build()
+    }
+
+    override fun enterGoogleAccount(param: SaveUserGoogleParam) {
+        var reference = firebaseInstance.getReference()
+        reference.child(param.idUser).get().addOnSuccessListener {
+            if (it.value == null){
+                reference.child(param.idUser).child("username").setValue(param.username)
+                reference.child(param.idUser).child("email").setValue(param.emailUser)
+            } else {
+                System.out.println("Не создаём, так как он уже был создан !")
+            }
+        }
     }
 
 

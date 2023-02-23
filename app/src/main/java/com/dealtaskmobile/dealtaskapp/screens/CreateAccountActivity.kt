@@ -24,6 +24,7 @@ import com.google.android.gms.common.SignInButton
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.database.core.utilities.Utilities
+import org.apache.commons.codec.digest.DigestUtils
 import org.w3c.dom.Text
 import javax.inject.Inject
 
@@ -70,7 +71,7 @@ class CreateAccountActivity : AppCompatActivity() {
 
     fun TestCreateAccount(view: View) : Unit {
         if(!TextUtils.isEmpty(enterPasswordCR.text) && !TextUtils.isEmpty(enterPasswordRepeatCR.text)){
-            var userCreate = CreateUserParam(username = enterUserNameCR.text.toString(), emailUser = enterEmailAddressCR.text.toString() , passwordUser = enterPasswordCR.text.toString())
+            var userCreate = CreateUserParam(username = enterUserNameCR.text.toString(), emailUser = enterEmailAddressCR.text.toString() , passwordUser = DigestUtils.md5Hex(enterUserNameCR.text.toString()+enterPasswordCR.text.toString()).lowercase())
             vm.createAccount(param = userCreate)
         } else {
             Toast.makeText(this,"Пустота",Toast.LENGTH_SHORT).show()

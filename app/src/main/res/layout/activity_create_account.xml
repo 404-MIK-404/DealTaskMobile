@@ -8,35 +8,73 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_vertical"
+        android:layout_height="wrap_content"
         android:paddingHorizontal="20dp"
         android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="35sp"
+                android:textColor="@color/black"
+                android:text="Create Account"
+                android:gravity="center_horizontal|center_vertical"/>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:src="@mipmap/icon_task_manager"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginTop="30dp"
+            android:text="Let’s get to know you ! \nEnter your details to continue"
+            android:layout_marginBottom="25dp"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:expandedHintEnabled="true"
+            app:startIconDrawable="@mipmap/user"
             android:layout_marginBottom="50dp">
 
             <EditText
                 android:id="@+id/enterUserNameCR"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter username here"
                 android:ems="10"
-                android:inputType="textEmailAddress"/>
+                android:hint="Enter username"
+                android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:startIconDrawable="@mipmap/email"
             android:layout_marginBottom="50dp">
 
             <EditText
                 android:id="@+id/enterEmailAddressCR"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter login here"
+                android:hint="Enter email"
                 android:ems="10"
                 android:inputType="textEmailAddress"/>
         </com.google.android.material.textfield.TextInputLayout>
@@ -45,29 +83,35 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            app:startIconDrawable="@mipmap/padlock"
             android:layout_marginBottom="50dp">
 
             <EditText
                 android:id="@+id/enterPasswordCR"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter password here"
                 android:ems="10"
-                android:inputType="textEmailAddress"/>
+                android:hint="Enter password"
+                android:inputType="textPassword"
+                app:passwordToggleEnabled="true"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
             android:layout_marginBottom="50dp">
 
             <EditText
                 android:id="@+id/enterPasswordRepeatCR"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter repeat password here"
+                android:hint="Enter repeat password"
                 android:ems="10"
-                android:inputType="textEmailAddress"/>
+                android:inputType="textPassword"
+                app:passwordToggleEnabled="true"/>
+
         </com.google.android.material.textfield.TextInputLayout>
 
 
