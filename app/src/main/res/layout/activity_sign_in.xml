@@ -35,6 +35,7 @@
                 android:layout_height="match_parent"
                 android:textSize="35sp"
                 android:textColor="@color/white"
+                android:fontFamily="@font/inter_bold"
                 android:text="Deal Task Manager"
                 android:gravity="center_horizontal|center_vertical"/>
 
@@ -48,24 +49,18 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             style="@style/EditTextHint"
             app:startIconDrawable="@mipmap/user">
 
             <EditText
                 android:id="@+id/editTextEmailAddress"
-                android:layout_width="match_parent"
                 android:background="@drawable/bg_white_rounded"
                 style="@style/EditTextHint"
-                android:layout_height="wrap_content"
                 android:hint="Enter username" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             app:startIconDrawable="@mipmap/padlock"
             style="@style/EditTextHint"
             app:endIconMode="password_toggle"
@@ -74,8 +69,6 @@
             <EditText
                 android:id="@+id/editTextPassword"
                 style="@style/EditTextHint"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:background="@drawable/bg_white_rounded"
                 android:hint="Enter password"
                 android:inputType="textPassword" />
@@ -85,23 +78,16 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonLogIn"
-            android:layout_width="match_parent"
-            android:layout_marginBottom="40dp"
-            android:layout_height="60dp"
+            style="@style/MaterialButtonClickStyle"
             android:onClick="SignInClick"
             app:backgroundTint="@null"
-            android:background="@drawable/background_button"
             android:text="Sign In" />
 
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonCreateAccount"
-            android:layout_width="match_parent"
-            android:layout_marginBottom="40dp"
-            android:layout_height="60dp"
-            app:cornerRadius="16dp"
+            style="@style/MaterialButtonClickStyle"
             app:backgroundTint="@null"
-            android:background="@drawable/background_button"
             android:onClick="CreateAccountFormClick"
             android:text="Create Account" />
 

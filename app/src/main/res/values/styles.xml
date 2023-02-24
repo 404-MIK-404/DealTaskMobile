@@ -29,8 +29,23 @@
         <item name="boxStrokeWidthFocused">0dp</item>
         <item name="hintTextColor">@color/white</item>
         <item name="android:layout_marginBottom">25dp</item>
-
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
+
+    <style name="MaterialButtonClickStyle" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Body1</item>
+        <item name="android:background">@drawable/background_button</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dp</item>
+    </style>
+
+
+
 
 
 </resources>

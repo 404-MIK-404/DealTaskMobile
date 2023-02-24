@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingTop="30dp"
-        android:paddingHorizontal="20dp"
+        android:paddingHorizontal="10dp"
         android:orientation="vertical">
 
         <TextView
@@ -17,6 +17,7 @@
             android:layout_marginBottom="5dp"
             android:textSize="25sp"
             android:textStyle="italic"
+            android:fontFamily="@font/inter"
             android:text="Welcome to Home page" />
 
 
@@ -26,6 +27,7 @@
             android:layout_marginBottom="30dp"
             android:textSize="22sp"
             android:textStyle="italic"
+            android:fontFamily="@font/inter"
             android:text="Today is: 23.02.2022" />
 
         <LinearLayout
@@ -37,10 +39,11 @@
                 android:id="@+id/textView12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/inter_bold"
                 android:textSize="20sp"
                 android:layout_marginBottom="10dp"
-                android:text="Tasks" />
+                android:text="Today" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycleViewTaskToday"
