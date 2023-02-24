@@ -54,8 +54,7 @@
             android:layout_height="wrap_content"
             app:expandedHintEnabled="true"
             app:startIconDrawable="@mipmap/user"
-            style="@style/EditTextHint"
-            android:layout_marginBottom="50dp">
+            style="@style/EditTextHint">
 
             <EditText
                 android:id="@+id/enterUserNameCR"
@@ -63,7 +62,6 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_white_rounded"
                 style="@style/EditTextHint"
-                android:ems="10"
                 android:hint="Enter username"
                 android:inputType="textEmailAddress" />
 
@@ -73,8 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:startIconDrawable="@mipmap/email"
-            style="@style/EditTextHint"
-            android:layout_marginBottom="50dp">
+            style="@style/EditTextHint">
 
             <EditText
                 android:id="@+id/enterEmailAddressCR"
@@ -83,7 +80,6 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_white_rounded"
                 android:hint="Enter email"
-                android:ems="10"
                 android:inputType="textEmailAddress"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -94,8 +90,7 @@
             app:passwordToggleEnabled="true"
             app:startIconDrawable="@mipmap/padlock"
             style="@style/EditTextHint"
-            app:endIconMode="password_toggle"
-            android:layout_marginBottom="50dp">
+            app:endIconMode="password_toggle">
 
             <EditText
                 android:id="@+id/enterPasswordCR"
@@ -103,7 +98,6 @@
                 style="@style/EditTextHint"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_white_rounded"
-                android:ems="10"
                 android:hint="Enter password"
                 android:inputType="textPassword"
                 app:passwordToggleEnabled="true"/>
@@ -114,8 +108,7 @@
             android:layout_height="wrap_content"
             app:passwordToggleEnabled="true"
             style="@style/EditTextHint"
-            app:endIconMode="password_toggle"
-            android:layout_marginBottom="50dp">
+            app:endIconMode="password_toggle">
 
             <EditText
                 android:id="@+id/enterPasswordRepeatCR"
@@ -124,7 +117,6 @@
                 android:layout_height="wrap_content"
                 android:hint="Enter repeat password"
                 android:background="@drawable/bg_white_rounded"
-                android:ems="10"
                 android:inputType="textPassword"
                 app:passwordToggleEnabled="true"/>
 

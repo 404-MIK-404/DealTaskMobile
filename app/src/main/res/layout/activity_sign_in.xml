@@ -51,8 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/EditTextHint"
-            app:startIconDrawable="@mipmap/user"
-            android:layout_marginBottom="50dp">
+            app:startIconDrawable="@mipmap/user">
 
             <EditText
                 android:id="@+id/editTextEmailAddress"
@@ -60,8 +59,7 @@
                 android:background="@drawable/bg_white_rounded"
                 style="@style/EditTextHint"
                 android:layout_height="wrap_content"
-                android:hint="Enter username"
-                android:ems="10" />
+                android:hint="Enter username" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -71,8 +69,7 @@
             app:startIconDrawable="@mipmap/padlock"
             style="@style/EditTextHint"
             app:endIconMode="password_toggle"
-            app:passwordToggleEnabled="true"
-            android:layout_marginBottom="50dp">
+            app:passwordToggleEnabled="true">
 
             <EditText
                 android:id="@+id/editTextPassword"
@@ -80,7 +77,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_white_rounded"
-                android:ems="10"
                 android:hint="Enter password"
                 android:inputType="textPassword" />
 
@@ -90,7 +86,7 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonLogIn"
             android:layout_width="match_parent"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="40dp"
             android:layout_height="60dp"
             android:onClick="SignInClick"
             app:backgroundTint="@null"
@@ -101,7 +97,7 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonCreateAccount"
             android:layout_width="match_parent"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="40dp"
             android:layout_height="60dp"
             app:cornerRadius="16dp"
             app:backgroundTint="@null"

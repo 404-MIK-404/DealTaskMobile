@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_active="false" android:drawable="@mipmap/checkbox_button_not_full_today"/>
+    <item android:state_active="true" android:drawable="@mipmap/checkbox_button_full_today"/>
+
+
+</selector>
