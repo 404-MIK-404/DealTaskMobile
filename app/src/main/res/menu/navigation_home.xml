@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Главное"
-        android:icon="@drawable/ic_baseline_home_24"
+    <item android:title="Home"
+        android:icon="@mipmap/note_list"
         android:id="@+id/selectHome"/>
 
-    <item android:title="Избранное"
-        android:icon="@drawable/ic_baseline_favorite_24"
+    <item android:title="Calendar"
+        android:icon="@mipmap/calendar"
         android:id="@+id/selectFavorite"/>
 
-    <item android:title="Графики"
-        android:icon="@drawable/ic_baseline_bar_chart_24"
+    <item android:title="Help"
+        android:icon="@mipmap/help_how_do"
         android:id="@+id/selectBarChart"/>
 
-    <item android:title="Новости"
-        android:icon="@drawable/ic_baseline_newspaper_24"
+    <item android:title="Profile"
+        android:icon="@mipmap/user"
         android:id="@+id/selectNews"/>
 </menu>

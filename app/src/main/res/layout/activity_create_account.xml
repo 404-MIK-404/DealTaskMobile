@@ -27,10 +27,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:textSize="35sp"
-                android:textColor="@color/white"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center_horizontal|center_vertical"
                 android:text="Create Account"
-                android:gravity="center_horizontal|center_vertical"/>
+                android:textColor="@color/white"
+                android:textSize="35sp" />
 
 
             <ImageView
@@ -43,115 +44,90 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
             android:layout_marginTop="30dp"
-            android:textColor="@color/white"
+            android:layout_marginBottom="25dp"
+            android:fontFamily="@font/inter"
             android:text="Let’s get to know you ! \nEnter your details to continue"
-            android:layout_marginBottom="25dp"/>
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             app:expandedHintEnabled="true"
             app:startIconDrawable="@mipmap/user"
-            style="@style/EditTextHint"
-            android:layout_marginBottom="50dp">
+            style="@style/EditTextHint">
 
             <EditText
                 android:id="@+id/enterUserNameCR"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_white_rounded"
                 style="@style/EditTextHint"
-                android:ems="10"
+                android:background="@drawable/bg_white_rounded"
+                android:fontFamily="@font/inter"
                 android:hint="Enter username"
                 android:inputType="textEmailAddress" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             app:startIconDrawable="@mipmap/email"
-            style="@style/EditTextHint"
-            android:layout_marginBottom="50dp">
+            style="@style/EditTextHint">
 
             <EditText
                 android:id="@+id/enterEmailAddressCR"
-                android:layout_width="match_parent"
                 style="@style/EditTextHint"
-                android:layout_height="wrap_content"
                 android:background="@drawable/bg_white_rounded"
+                android:fontFamily="@font/inter"
                 android:hint="Enter email"
-                android:ems="10"
-                android:inputType="textEmailAddress"/>
+                android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             app:passwordToggleEnabled="true"
             app:startIconDrawable="@mipmap/padlock"
             style="@style/EditTextHint"
-            app:endIconMode="password_toggle"
-            android:layout_marginBottom="50dp">
+            app:endIconMode="password_toggle">
 
             <EditText
                 android:id="@+id/enterPasswordCR"
-                android:layout_width="match_parent"
                 style="@style/EditTextHint"
-                android:layout_height="wrap_content"
                 android:background="@drawable/bg_white_rounded"
-                android:ems="10"
                 android:hint="Enter password"
                 android:inputType="textPassword"
-                app:passwordToggleEnabled="true"/>
+                app:passwordToggleEnabled="true" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             app:passwordToggleEnabled="true"
             style="@style/EditTextHint"
-            app:endIconMode="password_toggle"
-            android:layout_marginBottom="50dp">
+            app:endIconMode="password_toggle">
 
             <EditText
                 android:id="@+id/enterPasswordRepeatCR"
-                android:layout_width="match_parent"
                 style="@style/EditTextHint"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter repeat password"
                 android:background="@drawable/bg_white_rounded"
-                android:ems="10"
+                android:fontFamily="@font/inter"
+                android:hint="Enter repeat password"
                 android:inputType="textPassword"
-                app:passwordToggleEnabled="true"/>
+                app:passwordToggleEnabled="true" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
 
         <com.google.android.material.button.MaterialButton
+            style="@style/MaterialButtonClickStyle"
             android:id="@+id/buttonEventCreateAccount"
-            android:layout_width="match_parent"
-            android:layout_marginBottom="20dp"
-            android:layout_height="60dp"
-            app:backgroundTint="@null"
-            android:background="@drawable/background_button"
             android:onClick="TestCreateAccount"
-            app:cornerRadius="16dp"
-            android:text="Create Account" />
+            android:text="Create Account"
+            app:backgroundTint="@null" />
 
 
         <com.google.android.material.button.MaterialButton
+            style="@style/MaterialButtonClickStyle"
             android:id="@+id/backSignInActivity"
             android:onClick="BackSignInActivity"
             app:backgroundTint="@null"
-            android:background="@drawable/background_button"
-            android:layout_width="match_parent"
-            android:layout_marginBottom="20dp"
-            android:layout_height="60dp"
-            app:cornerRadius="16dp"
             android:text="Back" />
 
 
